@@ -21,8 +21,12 @@
     </div>
 
         <div class="h5 font-weight-bold">
-        Precio: <span class="text-danger">${{product.price}}</span>
-            </div>
+            Precio: <span class="text-danger">${{product.price}}</span>
+            {% load tag %}
+            <!-- Import convertir function located in tag.py -->
+            {{ convertir product.price as precio_convertido }}
+            <span class="text-danger">${{precio_convertido}}</span>
+        </div>
 
         <div class="">
         <p>{{product.description}} </p>
