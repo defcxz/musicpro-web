@@ -9,6 +9,8 @@ Para poder ejecutar el proyecto sin mayor problema, se debe tener los siguientes
 `pip install django-admin`
 ### Requests
 `pip install requests`
+
+
 ---
 # Integrantes
 * Javiera Azócar
