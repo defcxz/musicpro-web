@@ -24,7 +24,7 @@
             Precio: <span class="text-danger">${{product.price}}</span>
             {% load tag %}
             {% convertir product.price as precio_convertido %}
-            <span class="text-danger">${{precio_convertido}}</span>
+            <span class="text-dark">(${{precio_convertido}})</span>
         </div>
 
         <div class="">
