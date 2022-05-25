@@ -23,10 +23,10 @@
          <p>Código:{{product.id}}</p>
      </div>
         <div class="h5 font-weight-bold">
-            Precio: <span class="text-danger">${{product.price}}</span>
+            Precio: <span class="text-danger">CLP${{product.price}}</span>
             {% load tag %}
             {% convertir product.price as precio_convertido %}
-            <span class="text-dark">(${{precio_convertido}})</span>
+            <span class="text-dark">(USD${{precio_convertido}})</span>
         </div>
 
         <div class="">
