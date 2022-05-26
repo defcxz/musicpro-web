@@ -3,7 +3,7 @@
           <!-- Producto en tarjetas-->
           <div class="card text-center h-100">
             {% if product.image %}
-            <img class="card-img-top" src="{{ product.image.url}}" alt="Card image cap" style=" height: 150px; object-fit: cover;">
+            <img class="card-img-top" src="{{ product.image.url }}" alt="Card image cap" style=" height: 150px; object-fit: cover;">
             {% else %}
             <img class="card-img-top" src="{% static 'images/aimagenot.png' %}" alt="Card image cap" style=" height: 150px; object-fit: cover;">
 
