@@ -18,7 +18,17 @@
             <div class="btn-group">
                 <a href="{% url 'products:product' product.slug %}" class="btn btn-outline-success btn-sm"> 
                     👀 ver
-                </a> 
+                      </a> 
+
+                  <a href="{% url 'products:product' product.slug %}" class="btn btn-outline-danger btn-sm "> 
+                     👍🏻
+                     <h7> like</h7>
+            </a> 
+
+                            <a href="{% url 'products:product' product.slug %}" class="btn btn-outline-warning btn-sm "
+                       > 
+                     🛒cart
+            </a> 
             </div>
                   
 

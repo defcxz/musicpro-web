@@ -28,10 +28,11 @@
             {% convertir product.price as precio_convertido %}
             <span class="text-dark">(USD${{precio_convertido}})</span>
         </div>
-
+     
         <div class="">
         <p>{{product.description}} </p>
         </div>
+        
         <div class="">
             {% include 'carts/snippets/add.html' %}
         </div>
