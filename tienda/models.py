@@ -12,6 +12,6 @@ class Producto(models.Model) :
             default=timezone.now)
 
     def __str__(self):
-        return self.nombre
+        return str(self.nombre)
 
 

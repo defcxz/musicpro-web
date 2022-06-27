@@ -20,6 +20,12 @@ from products.views import ProductListView
 from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import include
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+router.register(r'Producto', views.ProductoViewSet)
+
+
 urlpatterns = [
     path('', ProductListView.as_view(), name="index"),
     path('usuarios/login', views.login_view, name="login"),
@@ -28,5 +34,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('productos/', include('products.urls')),
     path('carrito/', include('carts.urls')),
-      path('orden/', include('orders.urls')),
+    path('orden/', include('orders.urls')),
+
+    path('api-vista/', include(router.urls)) , 
+    path('api-auth/', include('rest_framework.urls', 
+        namespace='rest_framework'))
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

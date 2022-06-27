@@ -5,10 +5,11 @@ from django.shortcuts import redirect
 from django.contrib import messages
 from django.contrib.auth import login, logout
 from django.contrib.auth import authenticate
+from tienda.serializers import ProductoSerializer
 from .forms import RegisterForm
-#from django.contrib.auth.models import User
 from products.models import Product
-from users.models import User
+from rest_framework import viewsets
+from rest_framework import permissions
 
 #Vistas basadas en clases. Agilizas el proceso porque usas django, mover a view del proyecto
 
@@ -79,4 +80,7 @@ def login_view(request):
 
     })
 
-
+class ProductoViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductoSerializer
+    permission_classes = [permissions.IsAuthenticated]
