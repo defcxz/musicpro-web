@@ -100,8 +100,3 @@ ENV/
 # mypy
 .mypy_cache/
 
-.DS_Store
-media/
-*.pyc
-*.db
-*.pid
